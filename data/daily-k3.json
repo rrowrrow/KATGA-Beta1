@@ -3,22 +3,6 @@
   "showDailyMessageOnLoad": true,
 
   "manualWords": [
-    {
-      "date": "2026-06-02",
-      "word": "SIAP",
-      "category": "Fit To Work",
-      "hint": "Kondisi sebelum mulai bekerja",
-
-      "message": "Pastikan kondisi fisik dan mental dalam keadaan siap sebelum bekerja. Sapaan sederhana membantu mendeteksi kelelahan, stres, dan kehilangan fokus.",
-
-      "fullMessage": "PESAN HARIAN HSSE #1298\nSapaan Awal : Langkah Sederhana Menjaga Keselamatan\nJakarta, 2 Juni 2026\n\nAssalamu'alaykum, Wr. Wb.\nSemangat Pagi.\n\nPejuang Kelistrikan yang saya banggakan.\n\nBanyak kecelakaan kerja tidak hanya disebabkan oleh kegagalan peralatan atau kesalahan teknis, tetapi juga berawal dari kondisi fisik dan mental pekerja yang kurang siap namun tidak terdeteksi. Karena itu, sapaan sederhana sebelum memulai pekerjaan memiliki peran penting sebagai early warning system untuk mengenali tanda-tanda kelelahan, gangguan kesehatan, stres, atau hilangnya fokus. Satu sapaan singkat dapat menjadi langkah awal untuk memastikan setiap anggota tim benar-benar fit to work dan siap bekerja dengan aman.\n\nBerikut adalah tips yang bisa dilakukan untuk melakukan sapaan kepada rekan kerja, untuk memastikan rekan kerja dalam kondisi fit to work:\n1. Lakukan kontak mata, pastikan rekan kerja terlihat fokus, segar, dan siap bekerja.\n2. Ajukan pertanyaan terbuka, seperti \"bagaimana kondisi hari ini?\" untuk memberi ruang berdiskusi mengenai kondisi fisik maupun mental.\n3. Perhatikan respons dan bahasa tubuh, karena jawaban yang lambat, suara yang lemah, atau ekspresi yang tidak biasa dapat menjadi tanda awal kelelahan atau gangguan kesehatan.\n\nLast but not the least, mulailah setiap pekerjaan dengan berdoa.\n\nTidak Ada Yang Lebih Penting Dari Jiwa Manusia.\n\nLakukan pekerjaan dengan kualitas terbaik dan kembali pulang dalam kondisi lengkap, sehat, dan selamat demi keluarga di rumah.\n\nPesan ini disampaikan untuk diteruskan kepada pekerja di seluruh unit-unit PLN.\n\nWassalamu'alaykum, Wr. Wb.\nSalam Selamat, Sehat dan Aman.",
-
-      "meaning": "Siap berarti kondisi fisik dan mental dalam keadaan optimal sebelum bekerja.",
-
-      "k3Education": "Kondisi tidak siap seperti kelelahan, stres, atau kehilangan fokus merupakan salah satu penyebab utama kecelakaan kerja. Sapaan awal membantu tim mendeteksi kondisi tersebut lebih dini.",
-
-      "dailySafetyMessage": "Pastikan diri dan rekan kerja benar-benar siap sebelum memulai pekerjaan agar terhindar dari risiko kecelakaan."
-    },
 {
   "date": "2026-06-03",
   "word": "SEHAT",
@@ -36,6 +20,7 @@
 
   "dailySafetyMessage": "Pastikan selalu menjaga kesehatan diri agar dapat bekerja dengan aman dan optimal"
 }
+
   ],
 
   "fallbackWords": [
