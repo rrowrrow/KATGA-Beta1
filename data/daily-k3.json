@@ -4,21 +4,21 @@
 
   "manualWords": [
 {
-  "date": "2026-06-03",
-  "word": "SEHAT",
+  "date": "2026-06-04",
+  "word": "SEIMBANG",
   "category": "Kesehatan",
 
-  "hint": "Kondisi fisik yang harus dijaga",
+  "hint": "Kondisi tubuh yang stabil",
 
-  "message": "Jaga kesehatan saat berada di tempat umum dengan menjaga kebersihan diri, etika batuk, dan mengenali gejala penyakit sejak dini.",
+  "message": "Jaga keseimbangan hormon dengan tidur cukup, mengelola stres, pola makan sehat, dan rutin berolahraga agar tetap fokus dan produktif.",
 
-  "fullMessage": "PESAN HARIAN HSSE #1299\nMenjaga Kesehatan di Tempat Umum\nJakarta, 3 Juni 2026\n\nAssalamu'alaykum, Wr. Wb.\nSemangat Pagi.\n\nPejuang Kelistrikan yang saya banggakan.\n\nDalam aktivitas sehari-hari, kita tidak hanya berinteraksi di lingkungan kerja, tetapi juga di berbagai tempat umum dan keramaian yang berpotensi menjadi media penyebaran penyakit menular, seperti influenza, ISPA, gangguan pencernaan, dan penyakit infeksi lainnya. Kondisi kesehatan yang menurun tidak hanya berdampak pada diri sendiri, tetapi juga dapat memengaruhi keselamatan kerja, produktivitas, dan kesehatan rekan kerja di sekitar kita.\n\nUntuk itu, mari tingkatkan Kesadaran Kesehatan Masyarakat melalui langkah-langkah sederhana berikut:\n1. Jaga kebersihan diri dengan rutin mencuci tangan.\n2. Terapkan etika batuk dan bersin serta gunakan masker bila kurang fit.\n3. Kenali gejala sejak dini dan segera lakukan pemeriksaan kesehatan.\n\nMulailah setiap pekerjaan dengan berdoa.\nTidak ada yang lebih penting dari jiwa manusia.\n\nLakukan pekerjaan dengan kualitas terbaik dan kembali pulang dalam kondisi selamat.",
+  "fullMessage": "PESAN HARIAN HSSE #1300\nKeseimbangan Hormon Untuk Kinerja Lebih Baik\nJakarta, 4 Juni 2026\n\nAssalamu'alaykum, Wr. Wb.\nSemangat Pagi.\n\nPejuang Kelistrikan yang saya banggakan.\n\nHormon berperan penting dalam mengatur energi, emosi, tidur, metabolisme, daya tahan tubuh, hingga kesehatan jantung. Ketidakseimbangan hormon dapat memicu berbagai gangguan seperti diabetes, hipertensi, obesitas, stres berlebih, gangguan tidur, dan menurunkan produktivitas kerja.\n\nMenjaga keseimbangan hormon penting untuk menjaga fokus kerja, kestabilan emosi, dan kualitas hidup.\n\nUpaya yang dapat dilakukan antara lain:\n1. Tidur cukup dan berkualitas.\n2. Mengelola stres dengan baik.\n3. Mengonsumsi makanan bergizi seimbang.\n4. Rutin berolahraga.\n5. Menjaga berat badan ideal.\n6. Menghindari rokok dan alkohol.\n7. Pemeriksaan kesehatan berkala.\n\nMulailah setiap pekerjaan dengan berdoa.\nTidak ada yang lebih penting dari jiwa manusia.\n\nLakukan pekerjaan terbaik dan kembali pulang dalam kondisi selamat.",
 
-  "meaning": "Sehat berarti kondisi tubuh bebas dari penyakit dan siap beraktivitas secara optimal.",
+  "meaning": "Seimbang berarti kondisi tubuh dalam keadaan stabil antara hormon, energi, dan kesehatan.",
 
-  "k3Education": "Menjaga kesehatan di tempat umum sangat penting untuk mencegah penyebaran penyakit yang dapat berdampak pada keselamatan kerja dan produktivitas.",
+  "k3Education": "Hormon mengatur energi, emosi, dan fokus kerja. Ketidakseimbangan hormon dapat menyebabkan stres, kelelahan, dan menurunkan produktivitas kerja. 【1-22fa95】【2-e84b8c】",
 
-  "dailySafetyMessage": "Pastikan selalu menjaga kesehatan diri agar dapat bekerja dengan aman dan optimal"
+  "dailySafetyMessage": "Jaga keseimbangan tubuh agar tetap sehat, fokus, dan aman dalam bekerja"
 }
 
   ],
@@ -63,15 +63,15 @@
       "BOR",
       "REM"
     ],
-    "5": [
-    "SEHAT",
-    "SAKIT",
-    "CEGAH",
-    "GADUH",
-    "SAKIT",
-    "SEDIH",
-    "PARAH",
-    "JATUH"
+    "8": [
+    "SEIMBANG",
+    "SIMULASI",
+    "INSPEKSI",
+    "PENYAKIT",
+    "EVAKUASI",
+    "BARIKADE",
+    "PROSEDUR",
+    "ERGONOMI"
     ]
   }
 }  
