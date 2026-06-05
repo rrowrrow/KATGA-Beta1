@@ -4,21 +4,21 @@
 
   "manualWords": [
 {
-  "date": "2026-06-04",
-  "word": "SEIMBANG",
-  "category": "Kesehatan",
+  "date": "2026-06-05",
+  "word": "FOKUS",
+  "category": "Kesehatan Mental",
 
-  "hint": "Kondisi tubuh yang stabil",
+  "hint": "Hal yang harus dijaga saat bekerja",
 
-  "message": "Jaga keseimbangan hormon dengan tidur cukup, mengelola stres, pola makan sehat, dan rutin berolahraga agar tetap fokus dan produktif.",
+  "message": "Batasi konsumsi konten digital berlebihan agar tetap fokus, menjaga konsentrasi, dan bekerja dengan aman.",
 
-  "fullMessage": "PESAN HARIAN HSSE #1300\nKeseimbangan Hormon Untuk Kinerja Lebih Baik\nJakarta, 4 Juni 2026\n\nAssalamu'alaykum, Wr. Wb.\nSemangat Pagi.\n\nPejuang Kelistrikan yang saya banggakan.\n\nHormon berperan penting dalam mengatur energi, emosi, tidur, metabolisme, daya tahan tubuh, hingga kesehatan jantung. Ketidakseimbangan hormon dapat memicu berbagai gangguan seperti diabetes, hipertensi, obesitas, stres berlebih, gangguan tidur, dan menurunkan produktivitas kerja.\n\nMenjaga keseimbangan hormon penting untuk menjaga fokus kerja, kestabilan emosi, dan kualitas hidup.\n\nUpaya yang dapat dilakukan antara lain:\n1. Tidur cukup dan berkualitas.\n2. Mengelola stres dengan baik.\n3. Mengonsumsi makanan bergizi seimbang.\n4. Rutin berolahraga.\n5. Menjaga berat badan ideal.\n6. Menghindari rokok dan alkohol.\n7. Pemeriksaan kesehatan berkala.\n\nMulailah setiap pekerjaan dengan berdoa.\nTidak ada yang lebih penting dari jiwa manusia.\n\nLakukan pekerjaan terbaik dan kembali pulang dalam kondisi selamat.",
+  "fullMessage": "PESAN HARIAN HSSE #1301\nBrain Rot dan Dampaknya terhadap Keselamatan Kerja\nJakarta, 5 Juni 2026\n\nAssalamu'alaykum, Wr. Wb.\nSemangat Pagi.\n\nPejuang Kelistrikan yang saya banggakan.\n\nDi era digital saat ini, kita semakin mudah terpapar informasi, hiburan instan, dan konten yang terus mengalihkan perhatian. Jika tidak dikelola dengan bijak, kondisi ini dapat memicu brain rot, yaitu penurunan kemampuan fokus, konsentrasi, daya pikir, dan kesehatan mental akibat konsumsi konten digital yang berlebihan.\n\nDampaknya dapat berupa menurunnya fokus kerja, kelelahan mental, gangguan konsentrasi, kualitas tidur yang buruk, hingga penurunan produktivitas. Dalam pekerjaan berisiko tinggi, hilangnya fokus sekecil apa pun dapat meningkatkan potensi kesalahan kerja dan kecelakaan.\n\nUntuk menjaga kesehatan mental dan tetap fit to work:\n1. Batasi penggunaan media sosial.\n2. Hindari scrolling tanpa tujuan.\n3. Lakukan micro break.\n4. Seimbangkan aktivitas digital dan fisik.\n5. Istirahat dan tidur cukup.\n\nMulailah setiap pekerjaan dengan berdoa.\nTidak ada yang lebih penting dari jiwa manusia.\n\nLakukan pekerjaan terbaik dan kembali pulang dalam kondisi selamat.",
 
-  "meaning": "Seimbang berarti kondisi tubuh dalam keadaan stabil antara hormon, energi, dan kesehatan.",
+  "meaning": "Fokus berarti kemampuan memusatkan perhatian secara penuh pada pekerjaan yang dilakukan.",
 
-  "k3Education": "Hormon mengatur energi, emosi, dan fokus kerja. Ketidakseimbangan hormon dapat menyebabkan stres, kelelahan, dan menurunkan produktivitas kerja. ",
+  "k3Education": "Penurunan fokus akibat kelelahan mental atau distraksi digital dapat meningkatkan risiko kesalahan kerja dan kecelakaan, terutama pada pekerjaan berisiko tinggi.",
 
-  "dailySafetyMessage": "Jaga keseimbangan tubuh agar tetap sehat, fokus, dan aman dalam bekerja"
+  "dailySafetyMessage": "Jaga fokus saat bekerja untuk menghindari kesalahan dan menjaga keselamatan diri serta tim"
 }
 
   ],
@@ -63,16 +63,16 @@
       "BOR",
       "REM"
     ],
-    "8": [
-    "SEIMBANG",
-    "SIMULASI",
-    "INSPEKSI",
-    "PENYAKIT",
-    "EVAKUASI",
-    "KUALITAS",
-    "PROSEDUR",
-"KONSUMSI",
-    "ERGONOMI"
+    "5": [
+    "SEHAT",
+    "BIJAK",
+    "KERJA",
+    "TIDUR",
+    "BURUK",
+    "MEDIA",
+    "TANPA",
+"SALAM",
+    "MAKAN"
     ]
   }
 }  
