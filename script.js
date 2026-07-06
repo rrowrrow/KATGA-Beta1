@@ -842,14 +842,14 @@ function buildShareText() {
     state.todayData.fullMessage || "",
     "",
     "🌐 Mainkan KATGA:",
+        window.location.origin
+  ].join("\n"),
     `📅 ${state.todayKey}`,
     `🏆 Hasil: ${score}/${state.maxAttempts}`,
     "",
     ...lines,
     "",
-    "🎯 KATGA - Kata Harian HSSE",
-    window.location.origin
-  ].join("\n");
+    "🎯 KATGA - Kata Harian HSSE";
 
 }
 
