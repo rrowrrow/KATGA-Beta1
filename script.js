@@ -133,6 +133,21 @@ function bindEvents() {
       renderCurrentRow();
     }
   });
+els.board.addEventListener(
+  "click",
+  () => {
+
+    if (
+      state.locked ||
+      !state.hasReadMessage
+    ) {
+      return;
+    }
+
+    els.guessInput.focus();
+
+  }
+);
 }
 
 
