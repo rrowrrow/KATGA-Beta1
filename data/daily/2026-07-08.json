@@ -1,16 +1,11 @@
 {
-  "date": "2026-07-07",
-  "word": "LAPANGAN",
-  "category": "Budaya Keselamatan",
-  "hint": "Tempat nyata penerapan keselamatan kerja",
-
-  "message": "Keselamatan harus diwujudkan langsung di lapangan melalui tindakan nyata, bukan hanya dalam laporan.",
-
-  "fullMessage": "PESAN HARIAN HSSE #1307\n\nKeselamatan hadir di lapangan, bukan hanya dalam laporan.\n\nKeselamatan kerja adalah tanggung jawab seluruh insan yang terlibat dalam pekerjaan. Budaya keselamatan yang kuat tidak dibangun dari balik meja dan tidak tercipta hanya melalui laporan administrasi. Keselamatan lahir dari kepedulian, keterlibatan, dan kehadiran langsung di lapangan untuk memastikan setiap risiko benar-benar terkendali.\n\nSetiap pekerjaan harus diawali dengan identifikasi bahaya dan pengendalian risiko yang memadai. Pengawas harus hadir untuk memastikan prosedur dijalankan dengan benar, sementara pekerja harus memahami risiko pekerjaan dan menerapkan pengendalian yang telah ditetapkan.\n\nSebelum memulai pekerjaan, lakukan briefing keselamatan, pastikan izin kerja tersedia, gunakan APD yang sesuai, dan pastikan seluruh personel memahami tugas serta tanggung jawabnya.\n\nSelama pekerjaan berlangsung, seluruh pekerja wajib menjaga komunikasi, melaksanakan prosedur kerja dengan disiplin, serta menghentikan pekerjaan apabila ditemukan kondisi yang tidak aman.\n\nPenerapan Stop Work Authority harus menjadi kebiasaan ketika terdapat potensi bahaya yang belum terkendali. Tidak ada pekerjaan yang begitu penting sehingga harus dilakukan dengan cara yang tidak aman.\n\nKeselamatan harus terlihat melalui tindakan nyata di area kerja. Hadir di lapangan, melakukan inspeksi rutin, mengawasi pekerjaan, dan memastikan seluruh pengendalian risiko berjalan efektif merupakan bagian penting dalam membangun budaya keselamatan yang kuat.\n\nTidak Ada Yang Lebih Penting Dari Jiwa Manusia.\n\nLakukan pekerjaan dengan kualitas terbaik dan pulang dalam kondisi lengkap, sehat, dan selamat demi keluarga di rumah.",
-
-  "meaning": "Lapangan berarti tempat nyata pelaksanaan pekerjaan di mana seluruh prinsip keselamatan harus diterapkan secara langsung.",
-
-  "k3Education": "Budaya keselamatan tidak cukup dibangun melalui laporan atau administrasi. Keselamatan harus diwujudkan melalui kehadiran, pengawasan, komunikasi, dan tindakan nyata di lapangan agar risiko dapat dikendalikan secara efektif.",
-
-  "dailySafetyMessage": "Pastikan keselamatan hadir melalui tindakan nyata di lapangan, bukan hanya dalam laporan."
+  "date": "2026-07-06",
+  "word": "BLINDSPOT",
+  "category": "Alat Berat",
+  "hint": "Area yang tidak dapat terlihat oleh operator alat berat",
+  "message": "Waspadai blind spot alat berat untuk mencegah risiko tertabrak, terjepit, atau terlindas.",
+  "fullMessage": "PESAN HARIAN HSSE #1332\n\nBahaya Blind Spot Alat Berat\n\nPenggunaan alat berat seperti crane, excavator, forklift, maupun truk angkut merupakan bagian dari berbagai pekerjaan konstruksi, pemeliharaan, dan pemulihan gangguan di lingkungan PLN. Namun, setiap alat berat memiliki blind spot, yaitu area yang tidak dapat terlihat oleh operator meskipun melalui kaca spion atau kamera. Memasuki area tersebut tanpa koordinasi dapat mengakibatkan pekerja tertabrak, terjepit, atau terlindas.\n\nUntuk mencegah kecelakaan akibat blind spot, seluruh pekerja harus:\n\n1. Tidak berada di area blind spot atau terlalu dekat dengan alat berat yang sedang beroperasi.\n2. Memastikan operator mengetahui posisi pekerja sebelum mendekati atau memasuki area kerja alat berat.\n3. Menggunakan signalman atau flagman sebagai pemandu komunikasi pada pekerjaan dengan ruang pandang terbatas atau saat melakukan manuver.\n4. Menjaga komunikasi yang efektif menggunakan isyarat standar atau alat komunikasi yang telah disepakati.\n5. Menghentikan pekerjaan apabila kehilangan kontak visual dengan operator atau terdapat kondisi yang berpotensi membahayakan.\n\nTidak Ada Yang Lebih Penting Dari Jiwa Manusia.\n\nLakukan pekerjaan dengan kualitas terbaik dan kembali pulang dalam kondisi lengkap, sehat, dan selamat demi keluarga di rumah.",
+  "meaning": "Blind spot adalah area di sekitar alat berat yang tidak dapat terlihat oleh operator, sehingga berpotensi menyebabkan kecelakaan apabila pekerja berada di area tersebut tanpa koordinasi.",
+  "k3Education": "Kesadaran terhadap blind spot merupakan bagian penting dari keselamatan kerja saat berinteraksi dengan alat berat. Penggunaan signalman, komunikasi yang efektif, disiplin menjaga jarak aman, dan memastikan operator mengetahui posisi pekerja dapat mencegah insiden serius.",
+  "dailySafetyMessage": "Jangan memasuki area blind spot alat berat tanpa koordinasi. Pastikan operator mengetahui posisi Anda sebelum mendekati area kerja."
 }
