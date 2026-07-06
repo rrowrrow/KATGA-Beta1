@@ -821,17 +821,36 @@ function shareResult(fromPopup) {
 
 
 function buildShareText() {
-  const score = state.result === "win" ? state.attempts.length : state.locked ? "X" : state.attempts.length;
-  const lines = state.attempts.map((attempt) =>
-    attempt.evaluation.map(toEmoji).join("")
+
+  const score =
+    state.result === "win"
+      ? state.attempts.length
+      : state.locked
+        ? "X"
+        : state.attempts.length;
+
+  const lines = state.attempts.map(
+    (attempt) =>
+      attempt.evaluation
+        .map(toEmoji)
+        .join("")
   );
 
-
   return [
-    `KATGA | ${state.todayKey}`,
-    `${score}/${state.maxAttempts}`,
-    ...lines
+    "🎯 KATGA - Kata Harian HSSE",
+    "",
+    `📅 ${state.todayKey}`,
+    `🏆 Hasil: ${score}/${state.maxAttempts}`,
+    "",
+    ...lines,
+    "",
+    "📢 Pesan Keselamatan:",
+    state.todayData.message || "",
+    "",
+    "🌐 Mainkan KATGA:",
+    window.location.origin
   ].join("\n");
+
 }
 
 
