@@ -29,6 +29,7 @@ body {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background:
@@ -57,9 +58,9 @@ input:disabled {
 }
 
 .app-shell {
-  width: min(960px, calc(100% - 20px));
+  width: min(960px, calc(100% - 16px));
   margin: 0 auto;
-  padding: 18px 0 40px;
+  padding: 12px 0 max(40px, env(safe-area-inset-bottom));
 }
 
 .card {
@@ -218,8 +219,9 @@ h1 {
 }
 
 .message-scroll {
-  max-height: 280px;
-  overflow: auto;
+  max-height: min(40vh, 320px);
+  min-height: 220px;
+  overflow-y: auto;
   border: 1px solid var(--border);
   background: #fbfdff;
   border-radius: 16px;
@@ -269,21 +271,36 @@ h1 {
 
 .board-row {
   display: grid;
-  gap: 10px;
+  gap: 6px;
+  width: 100%;
 }
 
 .tile {
-  aspect-ratio: 1 / 1;
-  min-height: 56px;
-  border-radius: var(--radius-sm);
+  aspect-ratio: 1;
+  width: 100%;
+  min-height: clamp(32px, 8vw, 56px);
+
+  border-radius: 12px;
+
   display: grid;
   place-items: center;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+
+  font-size: clamp(
+    0.9rem,
+    2.7vw,
+    1.6rem
+  );
+
   font-weight: 800;
   text-transform: uppercase;
+
   background: var(--tile-bg);
   border: 2px solid var(--tile-border);
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .tile.filled {
@@ -323,11 +340,17 @@ h1 {
 
 #guessInput {
   width: 100%;
+
+  font-size: 16px;
+
   border-radius: 16px;
   border: 1px solid var(--border);
+
   background: #fbfdff;
   color: var(--text);
+
   padding: 14px 16px;
+
   outline: none;
   text-transform: uppercase;
 }
@@ -350,21 +373,30 @@ h1 {
 
 .keyboard-row {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  gap: 4px;
+  width: 100%;
 }
 
 .key {
-  min-width: 42px;
+  flex: 1;
+  min-width: 0;
   min-height: 48px;
+
   border: 1px solid var(--border);
   background: #f7fbff;
   color: var(--text);
-  padding: 0 10px;
+
+  padding: 0 4px;
+
+  font-size: clamp(
+    0.75rem,
+    2vw,
+    0.95rem
+  );
 }
 
 .key.wide {
-  min-width: 72px;
+  flex: 1.6;
 }
 
 .key.correct {
@@ -394,11 +426,16 @@ h1 {
 
 .modal {
   width: min(560px, 100%);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
   background: #fff;
+
   border-radius: 22px;
   border: 1px solid var(--border);
+
   box-shadow: var(--shadow);
-  overflow: hidden;
 }
 
 .modal-header,
@@ -506,4 +543,35 @@ h1 {
   .reader-controls button {
     width: 100%;
   }
+  @media (max-width: 430px) {
+
+  .hero {
+    padding: 16px;
+  }
+
+  .section {
+    padding: 14px;
+  }
+
+  .keyboard-row {
+    gap: 3px;
+  }
+
+  .key {
+    font-size: 0.78rem;
+    padding: 0;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .message-scroll {
+    padding: 12px;
+  }
+
+  .tile {
+    min-height: 30px;
+  }
+}
 }
