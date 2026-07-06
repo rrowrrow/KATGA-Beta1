@@ -830,7 +830,7 @@ function buildShareText() {
         : state.attempts.length;
 
   const lines = state.attempts.map(
-    (attempt) =>
+    attempt =>
       attempt.evaluation
         .map(toEmoji)
         .join("")
@@ -842,14 +842,12 @@ function buildShareText() {
     state.todayData.fullMessage || "",
     "",
     "🌐 Mainkan KATGA:",
-        window.location.origin
-  ].join("\n"),
+    "https://katga-beta1.vercel.app/",
     `📅 ${state.todayKey}`,
     `🏆 Hasil: ${score}/${state.maxAttempts}`,
-    "",
     ...lines,
-    "",
-    "🎯 KATGA - Kata Harian HSSE";
+    "🎯 KATGA - Kata Harian HSSE"
+  ].join("\n");
 
 }
 
