@@ -841,14 +841,13 @@ function buildShareText() {
     "",
     state.todayData.fullMessage || "",
     "",
-    "🎯 KATGA - Kata Harian HSSE",
-    "",
+    "🌐 Mainkan KATGA:",
     `📅 ${state.todayKey}`,
     `🏆 Hasil: ${score}/${state.maxAttempts}`,
     "",
     ...lines,
     "",
-    "🌐 Mainkan KATGA:",
+    "🎯 KATGA - Kata Harian HSSE",
     window.location.origin
   ].join("\n");
 
