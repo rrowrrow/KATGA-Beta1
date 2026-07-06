@@ -837,15 +837,16 @@ function buildShareText() {
   );
 
   return [
+    "📢 PESAN HARIAN HSSE",
+    "",
+    state.todayData.fullMessage || "",
+    "",
     "🎯 KATGA - Kata Harian HSSE",
     "",
     `📅 ${state.todayKey}`,
     `🏆 Hasil: ${score}/${state.maxAttempts}`,
     "",
     ...lines,
-    "",
-    "📢 Pesan Keselamatan:",
-    state.todayData.message || "",
     "",
     "🌐 Mainkan KATGA:",
     window.location.origin
