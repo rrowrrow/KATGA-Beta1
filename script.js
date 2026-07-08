@@ -846,7 +846,7 @@ function buildShareText() {
     `📅 ${state.todayKey}`,
     `🏆 Hasil: ${score}/${state.maxAttempts}`,
     ...lines,
-    "🎯 KATGA - Kata Harian HSSE"
+    "🎯 KATGA - Kata-Kata K3"
   ].join("\n");
 
 }
