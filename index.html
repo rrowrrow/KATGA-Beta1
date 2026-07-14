@@ -8,17 +8,31 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app-shell">
+<main class="app-shell">
     <header class="hero card">
       <div class="hero-text">
         <p class="eyebrow">HSSE Learning Game</p>
         <h1>KATGA</h1>
         <p class="subtitle">Kata-Kata K3 Harian</p>
-      </div>
+        </div>
 
       <div class="hero-actions">
-        <button id="helpBtn" class="ghost-btn" type="button">Panduan</button>
-        <button id="shareBtn" class="primary-btn" type="button">Share</button>
+<button
+  id="helpBtn"
+  class="ghost-btn"
+  type="button"
+  aria-label="Buka panduan permainan">
+  Panduan
+</button>
+
+       <button
+  id="shareBtn"
+  class="primary-btn"
+  type="button"
+  aria-label="Bagikan hasil permainan"
+>
+  Share
+</button>
       </div>
     </header>
 
@@ -61,7 +75,12 @@
 
       <div class="reader-controls">
         <label class="checkbox-row">
-          <input type="checkbox" id="confirmRead" disabled />
+<input
+  type="checkbox"
+  id="confirmRead"
+  disabled
+  aria-label="Konfirmasi sudah membaca pesan keselamatan"
+/>
           <span>Saya sudah membaca pesan keselamatan harian</span>
         </label>
 
@@ -76,6 +95,7 @@
     </section>
 
     <section id="gameSection" class="card section hidden">
+      
       <div class="section-header">
         <div>
           <p class="section-kicker">Langkah 2</p>
@@ -92,26 +112,45 @@
       </div>
 
       <div class="input-wrap">
-        <input
+<input
   id="guessInput"
   type="text"
+  inputmode="text"
   autocomplete="off"
   autocorrect="off"
   autocapitalize="characters"
   spellcheck="false"
   placeholder="Ketik jawaban..."
-          maxlength="12"
-        />
+  maxlength="12"
+  aria-label="Masukkan tebakan kata"
+/>
         <div class="input-buttons">
-          <button id="backspaceBtn" class="ghost-btn" type="button">Hapus</button>
-          <button id="submitBtn" class="primary-btn" type="button">Submit</button>
+<button
+  id="backspaceBtn"
+  class="ghost-btn"
+  type="button"
+  aria-label="Hapus huruf terakhir">
+  Hapus
+</button>
+<button
+  id="submitBtn"
+  class="primary-btn"
+  type="button"
+  aria-label="Kirim tebakan">
+  Submit
+</button>
         </div>
       </div>
 
       <div id="keyboard" class="keyboard"></div>
     </section>
-  </div>
+</main>
 
+<div
+  id="devPanel"
+  class="dev-panel hidden">
+</div>
+  
   <!-- Modal -->
   <div id="modalOverlay" class="modal-overlay hidden" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -125,11 +164,90 @@
       <div id="modalBody" class="modal-body"></div>
       <div id="modalActions" class="modal-actions"></div>
     </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<script type="module">
+
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+  getFirestore,
+  addDoc,
+  collection
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyB-6lfqdfOzqfoDp118bpvi7SmNufTU9Y8",
+
+  authDomain: "katga-bd583.firebaseapp.com",
+
+  projectId: "katga-bd583",
+
+  storageBucket: "katga-bd583.firebasestorage.app",
+
+  messagingSenderId: "70271543625",
+
+  appId: "1:70271543625:web:f4fa186d5d98391b95d298",
+
+  measurementId: "G-QB23BTQYPV"
+
+};
+
+const app =
+  initializeApp(firebaseConfig);
+
+const db =
+  getFirestore(app);
+
+window.db = db;
+window.addDoc = addDoc;
+window.collection = collection;
+
+</script>
+
+<script src="script.js"></script>
+
+<div id="profileModal" class="modal-overlay hidden">
+
+  <div class="modal">
+
+    <div class="modal-header">
+      <h3>Profil Pemain</h3>
+    </div>
+
+    <div class="modal-body">
+
+      <label>Nama</label>
+      <input
+        id="profileName"
+        type="text"
+      >
+
+      <label>Unit</label>
+      <input
+        id="profileUnit"
+        type="text"
+      >
+
+    </div>
+
+    <div class="modal-actions">
+
+      <button
+        id="saveProfileBtn"
+        class="modal-btn primary">
+        Simpan
+      </button>
+
+    </div>
+
   </div>
-
-  <!-- Toast -->
-  <div id="toast" class="toast"></div>
-
-  <script src="script.js"></script>
+  
 </body>
 </html>
