@@ -1,0 +1,45 @@
+body {
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  background: #eef4fb;
+
+}
+
+.dashboard {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 24px;
+
+}
+
+.card {
+
+  background: white;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+}
+
+.chart-container {
+
+  height: 400px;
+
+  background: white;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  margin-top: 16px;
+
+}

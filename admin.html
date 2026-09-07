@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KATGA Dashboard</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="admintest.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div class="dashboard-brand">
+          <img src="./img/logo.png" alt="KATGA Logo" class="brand-logo" />
+          <div class="brand-text">
+            <p class="eyebrow">HSSE Learning Game</p>
+            <h1>KATGA</h1>
+            <p class="subtitle">Leaderboard & Participation Dashboard</p>
+          </div>
+        </div>
+        <div class="header-copy">
+          <span class="header-badge">Live Results</span>
+          <h2>Dashboard</h2>
+          <p>Ringkasan aktivitas permainan, klasemen pemain, dan performa unit.</p>
+        </div>
+
+        <a href="index.html" class="back-to-game"> ← Kembali ke Permainan </a>
+      </header>
+
+      <section>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Overview</p>
+            <h2>Statistik Utama</h2>
+          </div>
+        </div>
+        <div id="summary" class="kpi-grid"></div>
+      </section>
+
+      <section class="leaderboard-grid">
+        <article class="panel">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-kicker">Leaderboard</p>
+              <h2>Top Players</h2>
+            </div>
+            <span class="section-note">Top 100 • 10 per halaman</span>
+          </div>
+          <div class="table-wrap">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Pemain</th>
+                  <th>Unit</th>
+                  <th>Menang</th>
+                  <th>Game</th>
+                  <th>Win Rate</th>
+                </tr>
+              </thead>
+              <tbody id="playerTableBody">
+                <tr>
+                  <td colspan="6" class="empty-state">Memuat data pemain...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="playerPagination" class="pagination"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading compact">
+            <div>
+              <p class="section-kicker">Unit Ranking</p>
+              <h2>Top Units</h2>
+            </div>
+            <span class="section-note">Top 10 berdasarkan win rate</span>
+          </div>
+          <div id="unitLeaderboard" class="unit-list"><div class="empty-state">Memuat data unit...</div></div>
+        </article>
+      </section>
+
+      <section class="panel chart-panel">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">Activity</p>
+            <h2>Partisipasi Harian</h2>
+          </div>
+          <span class="section-note">Jumlah game per tanggal</span>
+        </div>
+        <div class="chart-container"><canvas id="dailyChart"></canvas></div>
+      </section>
+    </main>
+
+    <script src="config.env.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00529b" />
+  <title>KATGA - Kata-Kata K3</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+  <link rel="stylesheet" href="styletest.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="hero card">
+      <div class="hero-brand">
+        <img src="./img/logo.png" alt="Logo PLN" class="hero-logo" />
+
+        <div class="hero-text">
+          <p class="eyebrow">HSSE Learning Game</p>
+          <h1>KATGA</h1>
+          <p class="subtitle">Kata-Kata K3 Harian</p>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <div class="action-item">
+          <button id="helpBtn" class="icon-square-btn" type="button" aria-label="Buka panduan permainan">
+            <span class="material-symbols-rounded" aria-hidden="true">help</span>
+          </button>
+          <span class="action-label">Panduan</span>
+        </div>
+
+        <div class="action-item">
+          <button id="dashboardBtn" class="icon-square-btn" type="button" aria-label="Buka dashboard">
+            <span class="material-symbols-rounded" aria-hidden="true">
+              dashboard
+            </span>
+          </button>
+          <span class="action-label">Dashboard</span>
+        </div>
+
+        <div class="action-item">
+          <button id="shareBtn" class="icon-square-btn" type="button" aria-label="Bagikan hasil permainan">
+            <span class="material-symbols-rounded" aria-hidden="true">share</span>
+          </button>
+          <span class="action-label">Bagikan</span>
+        </div>
+
+        <div class="action-item">
+          <button id="aboutBtn" class="icon-square-btn" type="button" aria-label="Tentang KATGA">
+            <span class="material-symbols-rounded" aria-hidden="true">
+              info
+            </span>
+          </button>
+          <span class="action-label">Tentang</span>
+        </div>
+    </header>
+
+    <section class="stats card">
+      <div class="stat-item">
+        <span>Streak</span>
+        <strong id="streakCount">0</strong>
+      </div>
+      <div class="stat-item">
+        <span>Best</span>
+        <strong id="bestCount">0</strong>
+      </div>
+      <div class="stat-item">
+        <span>Status</span>
+        <strong id="statusLabel">Memuat</strong>
+      </div>
+      <div class="stat-item">
+        <span>Tanggal</span>
+        <strong id="dateLabel">-</strong>
+      </div>
+    </section>
+
+    <section id="readerSection" class="card section">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Langkah 1</p>
+          <h2>Pesan Keselamatan Harian</h2>
+        </div>
+        <span class="badge">Wajib dibaca</span>
+      </div>
+
+      <div class="message-meta">
+        <div><strong id="messageTitle">Memuat pesan...</strong></div>
+        <div id="messageCategory" class="message-category">-</div>
+      </div>
+
+      <div id="messageScrollBox" class="message-scroll">
+        <p id="messageFullText">Sedang mengambil pesan harian...</p>
+      </div>
+
+      <div class="reader-controls">
+        <label class="checkbox-row">
+          <input type="checkbox" id="confirmRead" disabled aria-label="Konfirmasi sudah membaca pesan keselamatan" />
+          <span>Saya sudah membaca pesan keselamatan harian</span>
+        </label>
+
+        <button id="startGameBtn" class="primary-btn" type="button" disabled>Mulai Game</button>
+      </div>
+
+      <p id="readerHint" class="helper-text">Scroll sampai bawah untuk mengaktifkan konfirmasi baca.</p>
+    </section>
+
+    <section id="gameSection" class="card section hidden">
+      <div class="section-header">
+        <div>
+          <p class="section-kicker">Langkah 2</p>
+          <h2>Tebak Kata Kunci Hari Ini</h2>
+        </div>
+        <span id="wordLengthBadge" class="badge">0 huruf</span>
+      </div>
+
+      <p id="gameHint" class="helper-text">Hint sedang dimuat...</p>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+      <div class="board-wrap">
+        <div id="board" class="board"></div>
+      </div>
+
+      <div id="keyboard" class="keyboard"></div>
+    </section>
+  </main>
+
+  <div id="devPanel" class="dev-panel hidden"></div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div>
+          <p id="modalEyebrow" class="modal-eyebrow">Info</p>
+          <h3 id="modalTitle">Judul</h3>
+        </div>
+        <button id="modalCloseBtn" class="icon-btn" type="button" aria-label="Tutup">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+      <div id="modalActions" class="modal-actions"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Load file konfigurasi terlebih dahulu -->
+  <script src="config.env.js"></script>
+
+  <!-- Script Firebase Utama -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore,
+      addDoc,
+      collection,
+      getDocs,
+      query,
+      where
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // Mengambil konfigurasi dari window.firebaseConfig
+    const app = initializeApp(window.firebaseConfig);
+    const db = getFirestore(app);
+
+    window.db = db;
+    window.addDoc = addDoc;
+    window.collection = collection;
+
+    window.getDocs = getDocs;
+    window.query = query;
+    window.where = where;
+  </script>
+
+  <!-- TEMPLATE CARD QUOTES (Hidden) -->
+  <div id="quoteCardTemplate" class="quote-card-hidden">
+    <div class="qc-header">
+      <div class="qc-brand">
+        <img src="./img/logo.png" alt="KATGA Logo" class="qc-logo" />
+        <div>
+          <h3 class="qc-title">KATGA</h3>
+          <p class="qc-sub">HSSE Learning Game</p>
+        </div>
+      </div>
+      <div class="qc-badge" id="qcScoreBadge">HASIL: -</div>
+    </div>
+
+    <div class="qc-body">
+      <div class="qc-edu-section">
+        <!-- 1. EDUKASI K3 (Pesan Utama) -->
+        <p class="qc-edu-item"><strong>Edukasi K3:</strong> <span id="qcK3Text">-</span></p>
+
+        <!-- 2. DAILY SAFETY MESSAGE (Pesan Tambahan) -->
+        <p class="qc-edu-item" style="margin-top: 10px; font-style: italic"><strong>Safety Note:</strong> <span
+            id="qcSafetyText">-</span></p>
+      </div>
+
+      <div class="qc-meta" style="margin-top: 12px"><span id="qcPlayerName">Player</span> • <span
+          id="qcPlayerUnit">Unit</span></div>
+    </div>
+
+    <div class="qc-footer">
+      <div class="qc-tiles" id="qcTiles"></div>
+      <div class="qc-link">
+        <span id="qcDate">2026-08-24</span>
+        <strong>katga-beta1.vercel.app</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PREVIEW -->
+  <div id="sharePreviewModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h3>Siap Dibagikan!</h3>
+
+      <div class="preview-img-container">
+        <img id="sharePreviewImg" src="" alt="Preview Result" />
+      </div>
+
+      <div class="modal-actions" style="margin-top: 16px">
+        <button id="downloadImgBtn" type="button" class="secondary-btn">Unduh</button>
+        <button id="confirmShareBtn" type="button" class="primary-btn">Bagikan</button>
+        <button id="closePreviewBtn" type="button" class="ghost-btn">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <div id="profileModal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Profil Pemain</h3>
+      </div>
+
+      <div class="modal-body">
+        <form id="profileForm" onsubmit="return false;">
+          <div class="form-group">
+            <label for="profileName">Nama</label>
+            <input id="profileName" type="text" placeholder="Masukkan nama..." autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label for="profileUnit">Unit</label>
+            <select id="profileUnit">
+              <option value="">Pilih Unit</option>
+              <option value="UPK Flores">UPK Flores</option>
+              <option value="ULPL Maumere">ULPL Maumere</option>
+              <option value="ULPL Mataloko">ULPL Mataloko</option>
+              <option value="ULPL Ende">ULPL Ende</option>
+              <option value="UPK Timor">UPK Timor</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-actions">
+        <button id="saveProfileBtn" class="modal-btn primary" type="button">Simpan</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
