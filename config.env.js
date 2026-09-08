@@ -1,5 +1,5 @@
 // File konfigurasi terpusat
-window.firebaseConfig = {
+const.firebaseConfig = {
   apiKey: "AIzaSyB-6lfqdfOzqfoDp118bpvi7SmNufTU9Y8",
   authDomain: "katga-bd583.firebaseapp.com",
   projectId: "katga-bd583",
